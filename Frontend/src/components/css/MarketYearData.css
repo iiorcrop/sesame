@@ -1,0 +1,328 @@
+/* Market Year Data styles */
+.market-year-data-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.market-year-data-container h1 {
+  color: #026937;
+  text-align: center;
+}
+
+.data-source-indicator {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  padding: 5px 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  z-index: 5;
+}
+
+.data-source-indicator.mock {
+  background-color: #f57c00;
+}
+
+.year-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.year-select {
+  padding: 8px 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  margin-left: 10px;
+  font-size: 16px;
+  min-width: 100px;
+}
+
+.filter-section {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-item label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+.filter-item input,
+.filter-item select {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.filter-select {
+  height: 38px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0 10px;
+  font-size: 14px;
+  width: 100%;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #026937;
+  box-shadow: 0 0 0 2px rgba(2, 105, 55, 0.2);
+}
+
+.filter-select option {
+  padding: 8px;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.filter-button {
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.filter-button.apply {
+  background-color: #026937;
+  color: white;
+  border: none;
+}
+
+.filter-button.apply:hover {
+  background-color: #025229;
+}
+
+.filter-button.reset {
+  background-color: white;
+  color: #555;
+  border: 1px solid #ccc;
+}
+
+.filter-button.reset:hover {
+  background-color: #f0f0f0;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.action-button {
+  padding: 8px 15px;
+  background-color: #026937;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #025229;
+}
+
+.action-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.market-data-table-container {
+  overflow-x: auto;
+}
+
+.market-year-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.market-year-data-table th,
+.market-year-data-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.market-year-data-table th {
+  background-color: #026937;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.market-year-data-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.market-year-data-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.loading-message,
+.error-message,
+.no-data-message {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.loading-message {
+  color: #666;
+}
+
+.error-message {
+  color: #d32f2f;
+  background-color: #ffeaea;
+}
+
+.no-data-message {
+  color: #666;
+  font-style: italic;
+}
+
+/* Pagination styles */
+.pagination-controls {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination-info {
+  font-size: 14px;
+  color: #555;
+}
+
+.pagination-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.items-per-page-select {
+  padding: 5px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 14px;
+  min-width: 110px;
+}
+
+.pagination-button {
+  padding: 6px 12px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #f5f5f5;
+  border-color: #999;
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-number-buttons {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.page-number-button {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.page-number-button:hover:not(.active) {
+  background-color: #f5f5f5;
+  border-color: #999;
+}
+
+.page-number-button.active {
+  background-color: #026937;
+  color: white;
+  border-color: #026937;
+  font-weight: bold;
+}
+
+.ellipsis {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .filter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .action-button {
+    margin-bottom: 10px;
+  }
+}

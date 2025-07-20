@@ -1,0 +1,117 @@
+/* Define color variables for easier management */
+:root {
+  --primary-bg: #ffffff;
+  --sidebar-bg: #A5D6A7;
+  --hover-bg: #4CAF50; /* Fresh green for hover effect */
+  --active-bg: #388E3C;
+  --font-color: #2c3e50;
+  --font-hover-color: #ffffff;
+  --border-radius: 8px;
+  --box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar container styling */
+.sidebar-container {
+  margin: 20px;
+  position: relative;
+  margin-top: 20px;
+  background-color: var(--sidebar-bg);
+  box-shadow: -2px 0 5px var(--box-shadow);
+  border-radius: var(--border-radius);
+  padding: 10px;
+  overflow-y: auto;  /* Allow scrolling if content overflows */
+  height: auto;  /* Automatically adjust height based on content */
+  display: flex;  /* Flexible layout for container */
+  flex-direction: column; /* Items stacked vertically */
+  max-height: 100vh;  /* Prevents it from exceeding viewport height */
+  min-width: 200px;
+  transition: all 0.3s ease-in-out; /* Smooth transitions for resizing */
+}
+
+/* Sidebar item styling */
+.sidebar-item {
+  padding: 12px 15px;
+  background-color: #ffffff; /* Clean background for items */
+  border-radius: var(--border-radius);
+  margin-top: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--font-color);
+  display: block;  /* Ensures items are block-level elements */
+  text-decoration: none;  /* Prevents link text underlining if using anchor tags */
+}
+
+/* Active sidebar item */
+.sidebar-item.active {
+  background-color: var(--active-bg);
+  color: var(--font-hover-color);  /* White text for contrast */
+}
+
+/* Hover effect - Fresh Green */
+.sidebar-item:hover {
+  background-color: var(--hover-bg); /* Fresh green color on hover */
+  color: var(--font-hover-color);  /* White text on hover */
+}
+
+/* If no content, hide sidebar */
+.sidebar-container:empty {
+  display: none;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .sidebar-container {
+    min-width: auto;
+    max-height: 100vh;
+    padding: 10px 5px;  /* Reduce padding on small screens */
+  }
+  
+  .sidebar-item {
+    font-size: 14px;  /* Slightly smaller text on smaller screens */
+    padding: 10px;  /* Reduce padding for smaller devices */
+  }
+}
+
+
+/* 
+.sidebar-container {
+  position: relative;
+  margin-top: 20px;
+  background-color: #f5f5f5;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  overflow-y: auto;  
+  height: auto; 
+  display: flex;  
+  flex-direction: column;
+  max-height: 100vh; 
+}
+
+.sidebar-item {
+  padding: 12px 15px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;  
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  display: block; 
+}
+
+.sidebar-item.active {
+  background-color: #e3c2e5;
+}
+
+.sidebar-item:hover {
+  background-color: #e0a9d5;
+}
+
+.sidebar-container:empty {
+  display: none;
+}
+ */

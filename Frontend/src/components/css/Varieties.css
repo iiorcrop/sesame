@@ -1,0 +1,147 @@
+/* Styles for varieties page */
+.varieties-container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 200px);
+  margin: 20px 0;
+  position: relative;
+}
+
+.varieties-container > div.data-source-indicator {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  padding: 5px 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  z-index: 5;
+}
+
+.varieties-container > div.data-source-indicator.mock {
+  background-color: #f57c00;
+}
+
+.varieties-container > .varieties-sidebar,
+.varieties-container > .variety-content {
+  margin-top: 5px;
+}
+
+.varieties-sidebar {
+  width: 250px;
+  border-right: 1px solid #ddd;
+  background-color: #f5f9f5;
+  padding: 20px 0;
+  overflow-y: auto;
+}
+
+.varieties-sidebar h2 {
+  color: #026937;
+  padding: 0 15px 10px;
+  border-bottom: 2px solid #026937;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.varieties-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.varieties-list-item {
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.varieties-list-item:hover {
+  background-color: rgba(2, 105, 55, 0.1);
+}
+
+.varieties-list-item.active {
+  background-color: rgba(2, 105, 55, 0.2);
+  font-weight: bold;
+  border-left: 4px solid #026937;
+}
+
+.variety-content {
+  flex: 1;
+  padding: 20px 30px;
+  background-color: #fff;
+}
+
+.variety-header {
+  border-bottom: 2px solid #026937;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.variety-header h1 {
+  color: #026937;
+  margin-top: 0;
+}
+
+.variety-image {
+  max-width: 600px;
+  max-height: 400px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.variety-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.variety-info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.variety-info-table tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.variety-info-table td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+}
+
+.variety-info-table td:first-child {
+  width: 40%;
+  font-weight: 600;
+}
+
+.loading-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Quick Links styling */
+.quick-links {
+  background-color: #026937;
+  color: white;
+  padding: 10px 15px;
+  margin-bottom: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .varieties-container {
+    flex-direction: column;
+  }
+
+  .varieties-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+}

@@ -1,0 +1,261 @@
+/* Container Styles */
+.MarketData_container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Filter Section */
+.MarketData_filterContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.MarketData_filterWrapper {
+    display: flex;
+    flex-direction: column;
+    width: calc(33.33% - 20px);
+    min-width: 200px;
+}
+
+.MarketData_filterWrapper label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.MarketData_filterSelect {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #333; /* Darker border color */
+    border-radius: 6px;
+    background-color: #fafafa;
+}
+
+.MarketData_resetButton {
+    padding: 12px 18px;
+    background-color: #ff4d4f;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #d43f3a; /* Darker border for the button */
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.MarketData_resetButton:hover {
+    background-color: #d43f3a;
+    border-color: #9e2a2b; /* Hover darker border color */
+}
+
+/* Buttons Container */
+.MarketData_btnsContainer {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.MarketData_button {
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: 1px solid #333; /* Darker border */
+}
+
+.MarketData_button--excel {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.MarketData_button--excel:hover {
+    background-color: #45a049;
+}
+
+.MarketData_button--pdf {
+    background-color: #007bff;
+    color: white;
+}
+
+.MarketData_button--pdf:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styles */
+.MarketData_tableContainer {
+    margin-top: 30px;
+    overflow-x: auto;
+}
+
+.MarketData_table {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border: 1px solid #333; /* Darker border for the table itself */
+}
+
+.MarketData_table th, .MarketData_table td {
+    padding: 12px 15px;
+    text-align: left; /* Default to left alignment */
+    border: 1px solid #333; /* Darker borders for table cells */
+}
+
+.MarketData_table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.MarketData_table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.MarketData_table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.MarketData_table .total-row {
+    background-color: #e3f2fd;
+    font-weight: bold;
+    text-align: center;
+}
+
+.MarketData_table td {
+    text-align: left;
+}
+
+/* Specific column alignment */
+.MarketData_table .value-column {
+    text-align: center; /* Center alignment for numerical or value-based columns */
+}
+
+.MarketData_table .value-column-total {
+    font-weight: bold;
+    text-align: center; /* Center alignment for the "Total" row */
+}
+
+.market-table-group {
+    margin-bottom: 40px;
+}
+
+.MarketData_table th:first-child,
+.MarketData_table td:first-child {
+    border-left: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .MarketData_container {
+        padding: 15px;
+    }
+
+    .MarketData_filterWrapper {
+        width: calc(50% - 20px);
+    }
+
+    .MarketData_btnsContainer {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .MarketData_filterContainer {
+        flex-direction: column;
+    }
+
+    .MarketData_filterWrapper {
+        width: 100%;
+    }
+
+    .MarketData_btnsContainer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .MarketData_table {
+        font-size: 12px;
+    }
+
+    .MarketData_table th, .MarketData_table td {
+        padding: 10px;
+        border: 1px solid #333; /* Darker border for smaller screens */
+    }
+
+    .MarketData_table td {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .MarketData_table th {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .MarketData_container {
+        padding: 10px;
+    }
+
+    .MarketData_filterContainer {
+        gap: 10px;
+    }
+
+    .MarketData_filterWrapper {
+        width: 100%;
+    }
+
+    .MarketData_btnsContainer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .MarketData_table {
+        font-size: 10px;
+    }
+
+    .MarketData_table th, .MarketData_table td {
+        padding: 8px;
+        border: 1px solid #333; /* Darker border for small screens */
+    }
+
+    .MarketData_table td {
+        font-size: 10px;
+        word-wrap: break-word;
+    }
+
+    .MarketData_table th {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 1176px) {
+    /* Make the table horizontally scrollable on smaller screens */
+    .MarketData_table {
+        width: 100%;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        display: block;  /* Make the table a block-level element */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+    
+    /* Optional: Add styling to scrollbars (for webkit browsers) */
+    .MarketData_table::-webkit-scrollbar {
+        height: 8px;
+    }
+    
+    .MarketData_table::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+    }
+    
+    .MarketData_table::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}

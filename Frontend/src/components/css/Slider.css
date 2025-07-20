@@ -1,0 +1,149 @@
+/* src/components/Slider.css */
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  height: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Make sure each slide fills the container */
+.slick-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slick-dots {
+  bottom: 10px;
+  /* Position dots lower */
+  z-index: 10;
+  /* Ensure dots are visible above images */
+}
+
+.slick-dots li button:before {
+  color: green;
+  /* Change the color of dots */
+  font-size: 14px;
+  /* Adjust the dot size */
+}
+
+.home-container {
+  overflow: hidden;
+  /* Prevents any child content from overflowing */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .slider-container {
+    height: 500px;
+    /* Adjust height for tablets and smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-container {
+    height: 400px;
+    /* Adjust height for mobile screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .slick-dots li button:before {
+    font-size: 12px;
+    /* Smaller dots on very small screens */
+  }
+}
+
+.slider-container {
+  width: 100%;
+  max-width: 100vw;
+  height: 520px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slick-slider,
+.slick-list,
+.slick-track,
+.slick-slide,
+.slick-slide>div {
+  height: 100% !important;
+}
+
+.slick-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Custom arrow styles */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Position arrows */
+.prev-arrow {
+  left: 20px;
+}
+
+.next-arrow {
+  right: 20px;
+}
+
+/*
+.slider-container {
+  width: 100vw;  
+  overflow: hidden; 
+  margin: 0 auto;
+}
+
+
+.slick-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.slick-dots {
+  bottom: 10px;
+}
+
+.slick-dots li button:before {
+  color: green;
+}
+.home-container {
+  overflow: hidden;      
+} */
+
+.slider-container .slick-slide:first-child img {
+  width: 80% !important;
+  height: 80% !important;
+  margin: 0 auto;
+  display: block;
+}
+
+.slider-container img[src*="slider1.jpg"] {
+  height: 60% !important;
+  width: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}

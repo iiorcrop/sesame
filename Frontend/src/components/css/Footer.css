@@ -1,0 +1,65 @@
+/* App Wrapper to use Flexbox */
+.headerPart {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the content takes up at least 100% of the viewport height */
+}
+
+/* Main Content area */
+.content {
+  flex: 1; /* Makes the content area grow to fill available space */
+}
+
+/* Footer Styling */
+.footer {
+  background-color: rgb(130, 138, 130);
+  color: rgb(59, 25, 209);
+  padding: 15px 5px;
+  width: auto; /* Ensure it takes the full width */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.accessibility-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgb(59, 25, 209);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s;
+}
+
+.accessibility-link:hover,
+.accessibility-link:focus {
+  background-color: rgba(255, 255, 255, 0.4);
+  outline: 2px solid white;
+}
+
+.accessibility-icon {
+  font-size: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}

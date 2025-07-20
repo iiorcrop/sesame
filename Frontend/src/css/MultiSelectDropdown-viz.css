@@ -1,0 +1,28 @@
+/* MultiSelectDropdown component specific styles for visualization page */
+
+.filter-group .filter-item {
+  width: 100%;
+  max-width: 300px;
+}
+
+.filter-group label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+  display: block;
+}
+
+/* Ensure the dropdown styles are consistent with the visualization page design */
+.filter-group .filter-select-container {
+  margin-bottom: 0;
+}
+
+.filter-group .filter-select-dropdown {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filter-group .multi-select-info {
+  color: #1565c0;
+}

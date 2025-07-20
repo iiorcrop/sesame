@@ -1,0 +1,156 @@
+/* Styles for pests page */
+.pests-container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 200px);
+  margin: 20px 0;
+  position: relative;
+}
+
+.pests-container > div.data-source-indicator {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  padding: 5px 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  z-index: 5;
+}
+
+.pests-container > div.data-source-indicator.mock {
+  background-color: #f57c00;
+}
+
+.pests-sidebar {
+  width: 250px;
+  border-right: 1px solid #ddd;
+  background-color: #f5f9f5;
+  padding: 20px 0;
+  overflow-y: auto;
+}
+
+.pests-sidebar h2 {
+  color: #026937;
+  padding: 0 15px 10px;
+  border-bottom: 2px solid #026937;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.pests-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pests-list-item {
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pests-list-item:hover {
+  background-color: rgba(2, 105, 55, 0.1);
+}
+
+.pests-list-item.active {
+  background-color: rgba(2, 105, 55, 0.2);
+  font-weight: bold;
+  border-left: 4px solid #026937;
+}
+
+.pest-content {
+  flex: 1;
+  padding: 20px 30px;
+  background-color: #fff;
+}
+
+.pest-header {
+  margin-bottom: 20px;
+}
+
+.pest-header h1 {
+  color: #333;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #026937;
+  padding-bottom: 10px;
+}
+
+.pest-image-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.pest-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 350px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.placeholder-image {
+  background-color: #f0f0f0;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: #666;
+  font-style: italic;
+}
+
+.pest-info {
+  flex: 1;
+}
+
+.pest-info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pest-info-table tr {
+  border-bottom: 1px solid #eee;
+}
+
+.pest-info-table tr:last-child {
+  border-bottom: none;
+}
+
+.pest-info-table td {
+  padding: 10px;
+}
+
+.pest-info-table td:first-child {
+  font-weight: bold;
+  width: 40%;
+  color: #026937;
+}
+
+.loading-message,
+.error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error-message {
+  color: #d32f2f;
+}
+
+@media (max-width: 768px) {
+  .pests-container {
+    flex-direction: column;
+  }
+
+  .pests-sidebar,
+  .pest-content {
+    width: 100%;
+  }
+}

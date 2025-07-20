@@ -1,0 +1,47 @@
+/* Accessibility CSS */
+
+/* High contrast mode support */
+@media (forced-colors: active) {
+  * {
+    border-color: ButtonText !important;
+  }
+
+  a,
+  button {
+    color: LinkText !important;
+  }
+
+  :focus {
+    outline: 3px solid Highlight !important;
+  }
+}
+
+/* Skip to main content link */
+.skip-link {
+  background: #4299e1;
+  color: white;
+  font-weight: 700;
+  left: 50%;
+  padding: 8px;
+  position: absolute;
+  transform: translateY(-100%) translateX(-50%);
+  transition: transform 0.3s;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  transform: translateY(0%) translateX(-50%);
+}
+
+/* For screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

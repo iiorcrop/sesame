@@ -1,0 +1,847 @@
+/* APY Data specific styles */
+.apy-data-container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+.year-selector-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.year-selector-container label {
+  font-size: 0.95rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.year-selector {
+  padding: 8px 15px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  font-size: 0.95rem;
+}
+
+.year-selector:hover,
+.year-selector:focus {
+  border-color: #aaa;
+  outline: none;
+}
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eaeaea;
+  gap: 15px;
+}
+
+.filter-group {
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+@media (min-width: 769px) {
+  .filter-group {
+    flex: 0 1 auto; /* Don't grow to fill space, but allow shrinking if needed */
+  }
+}
+
+.filter-group label {
+  font-size: 0.85rem;
+  margin-bottom: 0;
+  color: #555;
+  font-weight: 500;
+}
+
+.filter-group input,
+.filter-group select {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  font-size: 0.95rem;
+}
+
+.filter-select {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  font-size: 0.95rem;
+}
+
+.filter-select:hover,
+.filter-select:focus {
+  border-color: #aaa;
+  outline: none;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.apply-button,
+.reset-button,
+.export-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s, transform 0.1s;
+  font-size: 0.95rem;
+}
+
+.apply-button {
+  background-color: #1e40af;
+  color: white;
+}
+
+.apply-button:hover {
+  background-color: #1c3d8e;
+}
+
+.reset-button {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.reset-button:hover {
+  background-color: #e0e0e0;
+}
+
+.export-button {
+  background-color: #4caf50;
+  color: white;
+  margin-left: auto;
+}
+
+.export-button:hover {
+  background-color: #43a047;
+}
+
+.view-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.view-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.view-button {
+  padding: 10px 16px;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.view-button:hover {
+  background-color: #e0e0e0;
+}
+
+.view-button.active {
+  background-color: #1e40af;
+  color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chart-data-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.data-table th {
+  background-color: var(--primary-color);
+  position: sticky;
+  top: 0;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.data-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.chart-container {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.chart-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Consistency with market visualizations */
+.chart-container h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.loading-container,
+.no-data-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.loading-spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid var(--primary-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.reference-note {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-left: 4px solid var(--primary-color);
+  border-radius: 4px;
+}
+
+.mock-data-notice {
+  margin: 15px 0;
+  padding: 10px 15px;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* No longer needed - comparison styles removed */
+
+/* Recharts customization for better consistency with market data */
+.recharts-cartesian-axis-line,
+.recharts-cartesian-axis-tick-line {
+  stroke: #e0e0e0;
+  stroke-width: 1px;
+}
+
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: #f0f0f0;
+  stroke-width: 1px;
+}
+
+.recharts-legend-item-text {
+  font-size: 12px;
+  color: #333;
+}
+
+.recharts-tooltip-wrapper {
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.recharts-default-tooltip {
+  padding: 10px 14px;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Enhanced tooltip and interaction styles */
+.recharts-tooltip-cursor {
+  fill: rgba(200, 200, 200, 0.1);
+  stroke-width: 0;
+}
+
+.recharts-tooltip-item {
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: #333;
+}
+
+.recharts-tooltip-item-name {
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.recharts-tooltip-item-separator {
+  margin: 0 4px;
+}
+
+.recharts-layer.recharts-bar-rectangle {
+  transition: opacity 0.2s;
+}
+
+.recharts-layer.recharts-bar-rectangle:hover {
+  opacity: 0.8;
+}
+
+.recharts-default-legend {
+  padding: 10px 0;
+  margin-top: 10px !important;
+}
+
+/* Match market data visualization styling for coordinates */
+.recharts-cartesian-axis-tick-value {
+  font-size: 11px;
+  fill: #555;
+  font-weight: 500;
+}
+
+.chart-container .recharts-surface,
+.comparison-chart .recharts-surface {
+  overflow: visible;
+}
+
+/* Enhanced axis and grid styling */
+.recharts-cartesian-axis-tick {
+  font-size: 12px;
+}
+
+.recharts-label {
+  font-size: 12px;
+  fill: #666;
+  font-weight: 500;
+}
+
+.recharts-reference-line line {
+  stroke: #d8d8d8;
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+
+.recharts-active-dot {
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+/* Custom tooltip styles */
+.custom-tooltip {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.custom-tooltip-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: #333;
+}
+
+.custom-tooltip-item {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.custom-tooltip-item-color {
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+.custom-tooltip-item-name {
+  margin-right: 5px;
+}
+
+.custom-tooltip-item-value {
+  font-weight: 500;
+}
+
+/* Multi-select dropdown styles */
+.multi-select-container {
+  position: relative;
+  width: 100%;
+  min-width: 200px;
+}
+
+/* Auto width for large screens */
+@media (min-width: 769px) {
+  .multi-select-container {
+    width: auto;
+    max-width: fit-content;
+  }
+}
+
+.multi-select-header {
+  padding: 8px 12px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 769px) {
+  .multi-select-header {
+    width: auto;
+    min-width: 180px;
+  }
+}
+
+.multi-select-header:hover,
+.multi-select-header:focus {
+  border-color: #aaa;
+  outline: none;
+}
+
+.multi-select-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  max-height: 250px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 769px) {
+  .multi-select-dropdown {
+    min-width: 100%;
+    width: max-content; /* Make dropdown as wide as its content */
+  }
+}
+
+.multi-select-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.multi-select-item:hover {
+  background-color: #f5f5f5;
+}
+
+.multi-select-item.selected {
+  background-color: #e6f7ff;
+}
+
+.multi-select-item input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.selected-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.selected-option-tag {
+  background-color: #e6f7ff;
+  border: 1px solid #91d5ff;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.selected-option-tag .remove {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.multi-select-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-top: 1px solid #eee;
+}
+
+.multi-select-actions button {
+  background: none;
+  border: none;
+  font-size: 0.8rem;
+  color: #1e40af;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.multi-select-actions button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Accessibility features for multi-select */
+.multi-select-container[data-high-contrast="true"] .multi-select-header,
+.multi-select-container[data-high-contrast="true"] .multi-select-dropdown {
+  background-color: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
+.multi-select-container[data-high-contrast="true"] .multi-select-item:hover {
+  background-color: #333;
+}
+
+.multi-select-container[data-high-contrast="true"] .multi-select-item.selected {
+  background-color: #444;
+}
+
+.multi-select-container[data-high-contrast="true"] .selected-option-tag {
+  background-color: #444;
+  border-color: #fff;
+  color: #fff;
+}
+
+.multi-select-container:focus-within .multi-select-header {
+  border-color: #1e40af;
+  box-shadow: none;
+}
+
+/* Keyboard navigation indicators */
+.multi-select-item:focus-visible {
+  outline: none;
+}
+
+.multi-select-container[data-font-size="large"] .multi-select-header,
+.multi-select-container[data-font-size="large"] .multi-select-item {
+  font-size: 1.1rem;
+  padding: 10px 14px;
+}
+
+.multi-select-container[data-font-size="larger"] .multi-select-header,
+.multi-select-container[data-font-size="larger"] .multi-select-item {
+  font-size: 1.2rem;
+  padding: 12px 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .filter-container,
+  .view-options {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-group {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .filter-buttons {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .export-button {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .view-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .view-button {
+    flex: 1;
+    text-align: center;
+  }
+
+  .chart-data-selector {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .multi-select-container {
+    width: 100%;
+  }
+
+  .selected-options {
+    max-height: 100px;
+    overflow-y: auto;
+  }
+
+  .multi-select-dropdown {
+    max-height: 200px;
+  }
+
+  /* Year comparison styles removed */
+}
+
+/* Animation for multi-select dropdown */
+@keyframes dropdown-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.multi-select-dropdown {
+  animation: dropdown-appear 0.2s ease-out;
+  transform-origin: top center;
+}
+
+.multi-select-header .dropdown-icon {
+  transition: transform 0.2s ease;
+}
+
+.multi-select-header.open .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.selected-option-tag {
+  animation: tag-appear 0.2s ease-out;
+}
+
+@keyframes tag-appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.selected-option-tag .remove:hover {
+  color: #ff4d4f;
+}
+
+/* Styles for APY Data component */
+
+/* Year comparison specific styles */
+.year-comparison-container {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-title {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.comparison-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.state-selector,
+.data-type-select {
+  min-width: 200px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.fetch-comparison-data {
+  padding: 8px 15px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.fetch-comparison-data:hover {
+  background-color: #3a7eca;
+}
+
+.close-comparison {
+  padding: 8px 15px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 15px;
+}
+
+.close-comparison:hover {
+  background-color: #c0392b;
+}
+
+/* High contrast mode modifications */
+[data-high-contrast="true"] .year-comparison-container {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+[data-high-contrast="true"] .comparison-title {
+  color: #fff;
+}
+
+[data-high-contrast="true"] .fetch-comparison-data,
+[data-high-contrast="true"] .close-comparison {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .comparison-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .state-selector,
+  .data-type-select {
+    width: 100%;
+  }
+}
+
+/* Screen reader only class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Additional chart styling */
+.chart-description {
+  margin-top: 15px;
+  font-style: italic;
+  color: #666;
+}
+
+/* Download chart button */
+.download-chart-button {
+  padding: 8px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.download-chart-button:hover {
+  background-color: #45a049;
+}
+
+/* Comparison actions container */
+.comparison-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}

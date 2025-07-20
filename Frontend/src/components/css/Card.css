@@ -1,0 +1,71 @@
+.card {
+  width: 280px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  margin: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 16px 0 10px;
+  color: #333;
+  padding: 0 16px;
+}
+
+.card-slider {
+  width: 100%;
+  height: 240px;
+}
+
+.card-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.card-image-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+  padding: 10px 16px 16px;
+  min-height: 40px;
+}
+
+.card-mini-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-btn {
+  background-color: #333;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 0px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Optional - Custom slick dots */
+.slick-dots li button:before {
+  font-size: 10px;
+  color: #bbb;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #555;
+}

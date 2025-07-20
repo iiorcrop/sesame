@@ -1,0 +1,74 @@
+.about-castor-container {
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: flex-start; */
+  /* overflow-x: hidden; */
+  /* Prevents horizontal overflow */
+  max-width: 100%;
+  /* Ensures no content overflows horizontally */
+  box-sizing: border-box;
+  /* Prevents padding from exceeding the screen width */
+}
+
+.about-castor-title {
+  color: red;
+  margin-bottom: 20px;
+  font-size: 2em;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.about-castor-container p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+  overflow-wrap: break-word;
+  /* Ensures text doesn't overflow out of the container */
+}
+
+.gch2-flower-img {
+  width: 43%;
+  max-width: 90vw;
+  height: 90%;
+  margin-right: 32px;
+  padding-left: 50px;
+}
+
+/* .about-castor-container {
+    width: 100%;
+    max-width: 1200px; 
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.about-castor-title {
+    color: red;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    align-self: flex-start;
+    word-wrap: break-word; 
+}
+
+.about-castor-container p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    hyphens: auto; 
+}
+ */

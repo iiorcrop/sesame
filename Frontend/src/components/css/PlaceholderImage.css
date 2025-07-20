@@ -1,0 +1,12 @@
+/* Placeholder for the castor variety image */
+.placeholder-image {
+  width: 100%;
+  height: 300px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  font-size: 16px;
+  border: 1px dashed #ccc;
+}

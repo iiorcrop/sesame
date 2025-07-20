@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #FDF7E3; /* Cream white header background */
+  border-bottom: 2px solid #A8A29E; /* subtle gray divider */
+}
+
+.header-left, .header-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-center {
+  flex: 2;
+  text-align: center;
+}
+
+.header-image {
+  height: 80px;
+  width: auto;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: #3A8730; /* Fresh green title */
+}
+
+.header-subtitle {
+  font-size: 20px;
+  color: #8B4513; /* Rust brown subtitle */
+  margin: 0;
+}
